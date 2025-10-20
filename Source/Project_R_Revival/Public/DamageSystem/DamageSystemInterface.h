@@ -58,6 +58,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Damage System | Implement")
 	int32 GetTeamNumber();
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Damage System | Implement")
+	void SetIsInterruptable(bool IsInterruptable);
 	
 	
 };
