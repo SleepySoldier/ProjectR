@@ -37,7 +37,7 @@ bool UDamageSystemComponent::TakeDamage(const FDamageInfo DamageInfo)
 	{		//Block or full parry
 		if (bIsBlocking && DamageInfo.bCanBeBlocked)
 		{
-			OnBlocked.Broadcast(DamageInfo.bCanBeParried);
+			OnBlocked.Broadcast(DamageInfo.bCanBeParried, DamageInfo.DamageCauser);
 			return false;
 		}
 		else // Take full damage, die or stagger?

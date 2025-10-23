@@ -47,7 +47,7 @@ struct FDamageInfo
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHealthChanged, float, HealthPercent);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDamageResponse, FDamageInfo, DamageInfo);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnBlocked, bool, CanBeParried);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnBlocked, bool, CanBeParried, AActor*, DamageCauser);
 
 
 
